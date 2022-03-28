@@ -1,0 +1,54 @@
+int main(){
+    n;
+    r = c = 0;
+    counter(a[n][n],n,r,c);
+}
+
+int counter(int a[n][n], int n, int r, int c){
+    if(r == n){
+        return 0;
+    }
+    if(a[r][c] == 'b' || c == n){
+        r++;
+        return counter(a[][],n, r, 0);
+    }
+    c++;
+    return 1 + counter(a[][],n, r, c);
+}
+
+    if(u == l){
+      r++;
+      if(a[r][u] == 'a'){
+        return u + 1 + counter(a, 0, (a.length - 1), r);
+      }
+      return u + counter(a, 0, (a.length -1), r);
+    }
+    int mid = l + (u-l)/2;
+    if(a[r][mid] == 'b'){
+      u = mid;
+      return counter(a, l, u, r);
+    }
+    l = mid + 1;
+    return counter(a, l, u, r);
+
+    çalışan kod:
+
+      static int counter(char a[][], int r){
+    int u = a.length - 1;
+    int l = 0;
+    int mid = 0;
+    if(r == a.length){
+      return 0;
+    }
+    while(u != l){
+      mid = l + (u-l)/2;
+      if(a[r][mid] == 'a'){
+        l = mid + 1;
+      }
+      else {
+        u = mid;
+      }
+    }
+    r++;
+    return l + counter(a, r);
+  }
